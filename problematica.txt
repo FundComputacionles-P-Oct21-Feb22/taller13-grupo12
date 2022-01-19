@@ -54,16 +54,16 @@
 50.funcion obtenerCadena(a, i; b, i) : i
 51.cadena, x(70) [{a-z}, {A-Z}, {BS}]
 52.Si (b = 0) entonces
-	53.cadena = "%s (%s unidades) ", a*10^b, a
+	53.cadena = "%d (%d unidades) ", a*10^b, a
 54.Caso Contrario
 	55.Si (b = 1) entonces
-		56.cadena = "%s (%s decenas) ", a*10^b, a
+		56.cadena = "%d (%d decenas) ", a*10^b, a
 	57.Caso Contrario
 		58.Si (b = 2) entonces
-			59.cadena = "%s (%s centenas) ", a*10^b, a
+			59.cadena = "%d (%d centenas) ", a*10^b, a
 		60.Caso Contrario
 			61.Si (b = 3) entonces
-				62.cadena = "%s (%s unidades de millar) ", a*10^b, a
+				62.cadena = "%d (%d unidades de millar) ", a*10^b, a
 63.Fin si
 64.retornar cadena
 65.fin funcion obtenerCadena
@@ -72,7 +72,7 @@
 66.funcion calcularResiduo(a, i; b, i) : i
 67.residuo, i[0-n]
 68.residuo = a MOD 10
-69.Escribir "residuo * 10 elevado a la potencia b"
+69.Escribir "%d * 10 elevado a la potencia %d", residuo, b
 70.retornar residuo
 71.fin funcion calcularResiduo
 
