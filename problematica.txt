@@ -1,0 +1,79 @@
+1.Inicio
+
+2.funcion principal()
+3.k, i[0-n]
+4.k1, i[0-n]
+5.valor, i[0-n]
+6.cadena, x(70) [{a-z}, {A-Z}, {BS}]
+
+7.Escribir "Ingrese un valor positivo"
+8.Obtener k
+9.k1 = k
+10.Si (k1 >= 0) AND (k1 < 10) entonces
+	11.Para (i, i[0-n] = 0, i < 1, 1)
+		12.j, i[0-n] = 0
+		13.valor = calcularResdiduo(k1, j)
+		14.k1 = k1/10
+		15.cadena = cadena + obtenerCadena(valor, j)
+		16.j = j + 1
+	17.fin Para
+18.Caso Contrario
+	19.Si (k1 >= 10) AND (k1 < 100) entonces
+		20.Para (i, i[0-n] = 0, i < 2, 1)
+			21.j, i[0-n] = 0
+			22.valor = calcularResdiduo(k1, j)
+			23.k1 = k1/10
+			24.cadena = cadena + obtenerCadena(valor, j)
+			25.j = j + 1
+		26.fin Para
+	27.Caso Contrario
+		28.Si (k1 >= 100) AND (k1 < 1000) entonces
+			29.Para (i, i[0-n] = 0, i < 3, 1)
+				30.j, i[0-n] = 0
+				31.valor = calcularResdiduo(k1, j)
+				32.k1 = k1/10
+				33.cadena = cadena + obtenerCadena(valor, j)
+				34.j = j + 1
+			35.fin Para
+		36.Caso Contrario
+			37.Si (k1 >= 1000) AND (k1 < 10000) entonces
+					38.Para (i, i[0-n] = 0, i < 4, 1)
+						39.j, i[0-n] = 0
+						40.valor = calcularResdiduo(k1, j)
+						41.k1 = k1/10
+						42.cadena = cadena + obtenerCadena(valor, j)
+						43.j = j + 1
+					44.fin Para
+			45.Caso Contrario
+				46.Si (k1 < 0) OR (k1 >= 10000) entonces
+					47.Escribir "El valor ingresado no se encuentra dentro de los límites"
+48.Fin si
+
+49.Fin funcion principal
+
+50.funcion obtenerCadena(a, i; b, i) : i
+51.cadena, x(70) [{a-z}, {A-Z}, {BS}]
+52.Si (b = 0) entonces
+	53.cadena = "%s (%s unidades) ", a*10^b, a
+54.Caso Contrario
+	55.Si (b = 1) entonces
+		56.cadena = "%s (%s decenas) ", a*10^b, a
+	57.Caso Contrario
+		58.Si (b = 2) entonces
+			59.cadena = "%s (%s centenas) ", a*10^b, a
+		60.Caso Contrario
+			61.Si (b = 3) entonces
+				62.cadena = "%s (%s unidades de millar) ", a*10^b, a
+63.Fin si
+64.retornar cadena
+65.fin funcion obtenerCadena
+
+
+66.funcion calcularResiduo(a, i; b, i) : i
+67.residuo, i[0-n]
+68.residuo = a MOD 10
+69.Escribir "residuo * 10 elevado a la potencia b"
+70.retornar residuo
+71.fin funcion calcularResiduo
+
+72.Fin
